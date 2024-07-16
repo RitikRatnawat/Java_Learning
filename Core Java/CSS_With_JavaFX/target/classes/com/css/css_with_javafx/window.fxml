@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.web.WebView?>
+
+<GridPane fx:controller = "com.css.css_with_javafx.Controller"
+          xmlns:fx = "http://javafx.com/fxml" alignment = "center" hgap = "10" vgap = "10"
+          stylesheets = "@style.css" fx:id = "gridpane">
+
+    <Button text = "Open..." onAction = "#handleClick" GridPane.rowIndex = "0" GridPane.columnIndex = "0"/>
+    <Button text = "Hello Button2" GridPane.rowIndex = "0" GridPane.columnIndex = "1"/>
+
+    <Button text = "Hello Button3" id = "three" GridPane.rowIndex = "0" GridPane.columnIndex = "2"/>
+
+    <Button text = "Hello Button4" GridPane.rowIndex = "0" GridPane.columnIndex = "3"
+        fx:id = "btn4"/>
+    <Button text = "Hello Button5" GridPane.rowIndex = "0" GridPane.columnIndex = "4"/>
+
+    <fx:define>
+        <ToggleGroup fx:id = "gender"/>
+    </fx:define>
+
+    <RadioButton text = "Male" GridPane.rowIndex = "1" GridPane.columnIndex = "0" toggleGroup = "$gender"/>
+    <RadioButton text = "Female" GridPane.rowIndex = "1" GridPane.columnIndex = "1" toggleGroup = "$gender"/>
+
+    <Label text = "JavaFX Effects" fx:id = "lbl" GridPane.rowIndex = "2" GridPane.columnIndex = "0"
+            onMouseEntered = "#handleMouseClick" onMouseExited = "#handleMouseExit"/>
+
+    <Hyperlink text = "www.javafx.com" GridPane.rowIndex = "3" GridPane.columnIndex = "0"
+        onAction = "#handleLinkClick"/>
+
+<!--    <WebView GridPane.rowIndex = "6" GridPane.columnIndex = "0" GridPane.rowSpan = "3"/>-->
+</GridPane>
